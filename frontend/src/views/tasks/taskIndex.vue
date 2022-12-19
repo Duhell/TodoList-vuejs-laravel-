@@ -10,6 +10,10 @@
 <template>
 
 	<div class="mt-12 p-12">
+
+		<div class="flex justify-end m-2 p-2">
+			<RouterLink :to="{name:'taskCreate'}" class="px-4 py-2 bg-indigo-400 hover:bg-indigo-700 text-white rounded">Create New</RouterLink>
+		</div>
 		<div class="overflow-x-auto relative">
 		    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
 		        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
