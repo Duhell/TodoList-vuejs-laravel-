@@ -2,7 +2,7 @@
 	import useTasks from '../../composables/tasks';
 	import { onMounted } from 'vue';
 
-	const { allTask,getAllTasks } = useTasks();
+	const { allTask,getAllTasks,deleteTask } = useTasks();
 
 	onMounted(()=> getAllTasks());
 </script>
@@ -22,7 +22,7 @@
 		                    Todo List
 		                </th>
 		                <th scope="col" class="py-3 px-6">
-		                    Action
+		                   
 		                </th>
 		               
 		            </tr>
@@ -34,7 +34,12 @@
 		                    {{ task.task }}
 		                </td>
 		                <td class="py-4 px-6">
-		                    Edit | Delete
+		                    <RouterLink :to="{name:'taskEdit', params:{id: task.id} }" 
+							class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 text-white rounded">Edit</RouterLink>
+							|
+							<button
+							@click="deleteTask(task.id)" 
+							class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded">Delete</button>
 		                </td>
 		                
 		            </tr>

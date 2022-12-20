@@ -25,7 +25,8 @@ const router = createRouter({
       path: '/tasks/:id/edit',
       name: 'taskEdit',
       
-      component: () => import('../views/tasks/taskEdit.vue')
+      component: () => import('../views/tasks/taskEdit.vue'),
+      props:true,
     }
   ]
 })
