@@ -25,11 +25,11 @@ class storeTaskRequest extends FormRequest
     public function rules()
     {
         return [
-            
+
             'task' => [
                 'required',
                 'min:3',
-                'max:20', 
+                'max:50',
                  Rule::unique('tasks')->ignore($this->task)]
         ];
     }
